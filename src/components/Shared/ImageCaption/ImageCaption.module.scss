@@ -1,0 +1,24 @@
+.caption{
+  @media (max-width: 500px){
+    font-size:4vw;
+    padding-left: 5vw;
+  }
+  position: relative;
+  text-transform: capitalize;
+  color: #5F5F5F;
+  line-height: 300%;
+  padding-left: 3.5vw;
+  font-size: 1.35vw;
+  &:before{
+    @media (max-width: 500px){
+      width: 4vw;
+    }
+      position: absolute;
+    content: '';
+    width: 2.5vw;
+    height: 1px;
+    background-color: #5F5F5F;
+    top: 50%;
+    left: 0;
+  }
+}

@@ -1,0 +1,149 @@
+@import '../../../styles/variables';
+
+.services {
+  @media (max-width: 500px) {
+    flex: 0 0 100%;
+  }
+  flex: 0 0 50%;
+  padding-left: 5vw;
+}
+
+.serviceLink {
+  @media (max-width: 500px) {
+    font-size: 8vw;
+    line-height: 135%;
+    margin-bottom: 5vw;
+  }
+  position: relative;
+  font-size: 2.083vw;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #323232;
+  letter-spacing: 0.1em;
+  line-height: 220%;
+  transition: 0.4s;
+
+  &::before {
+    @media (max-width: 500px) {
+      display: none;
+    }
+    content: '';
+    position: absolute;
+    width: 2.083vw;
+    height: 1px;
+    background-color: #d4c2d3;
+    top: 50%;
+    left: 0;
+    transition: opacity 0.4s;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &:hover {
+    color: $main-color;
+    padding-left: 2.83vw;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+.linksTitle {
+  @media (max-width: 500px) {
+    margin-bottom: 8vw;
+  }
+    margin-bottom: 3.6vw;
+}
+.servicesImagesCont {
+  @media (max-width: 500px) {
+    flex: 0 0 100%;
+    padding-bottom: 18vw;
+  }
+  flex: 0 0 50%;
+  position: relative;
+  z-index: 10;
+}
+
+.serviceImages {
+  position: relative;
+  overflow: hidden;
+
+  & > div {
+    animation: zoomOut 1s forwards cubic-bezier(0.23, 0.55, 0.64, 0.9);
+  }
+
+  &:first-child {
+    @media (max-width: 500px) {
+      min-width: 65.6vw;
+      left: 5%;
+      animation: none;
+    }
+    max-width: 20.83vw;
+    left: 30%;
+    animation: firstImageFade 0.7s forwards cubic-bezier(0.23, 0.55, 0.64, 0.9);
+  }
+
+  &:nth-child(2) {
+    @media (max-width: 500px) {
+      min-width: 55.16vw;
+      left: 35%;
+      top: -5%;
+      animation: none;
+    }
+    max-width: 17.4vw;
+    left: 56%;
+    //top: -8%;
+    animation: secondImageFade 1s forwards cubic-bezier(0.23, 0.55, 0.64, 0.9);
+  }
+  &:nth-child(3) {
+    @media (max-width: 500px) {
+      min-width: 75.16vw;
+      left: 5%;
+      //top: 46%;
+      animation: none;
+    }
+    max-width: 15.5vw;
+    left: 13%;
+    animation: thirdImageFade 0.7s forwards cubic-bezier(0.23, 0.55, 0.64, 0.9);
+  }
+}
+@keyframes zoomOut {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes firstImageFade {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: -5%;
+    opacity: 1;
+  }
+}
+@keyframes secondImageFade {
+  from {
+    opacity: 0;
+    top: 2%;
+  }
+  to {
+    top: -8%;
+    opacity: 1;
+  }
+}
+@keyframes thirdImageFade {
+  from {
+    opacity: 0;
+    top: -36%;
+  }
+  to {
+    opacity: 1;
+    top: -46%;
+  }
+}

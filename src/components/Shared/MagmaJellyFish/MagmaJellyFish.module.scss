@@ -1,0 +1,15 @@
+.meduza {
+  @media (max-width: 500px) {
+
+  }
+  width: 52vw;
+  position: absolute;
+  z-index: 9;
+  //animation: rotate 60s infinite linear alternate;
+}
+//
+//@keyframes rotate {
+//  to{
+//    transform: rotate(360deg)
+//  }
+//}

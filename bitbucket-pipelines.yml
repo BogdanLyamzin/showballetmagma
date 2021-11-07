@@ -1,0 +1,28 @@
+
+image: node:12.16.0
+
+definitions:
+  services:
+    docker:
+      memory: 2048
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Set Environment
+          script:
+            - cp .env.example .env
+            - sed -i "s|NEXT_PUBLIC_API_URL=|NEXT_PUBLIC_API_URL=https://admin.showballetmagma.com|g" .env
+          artifacts:
+            - .env
+      - step:
+          name: Build
+          size: 2x
+          script:
+            - export IMAGE_NAME=$DOCKER_HUB_USERNAME/$APPLICATION_NAME:gcp-$BITBUCKET_COMMIT
+            - docker build -t $IMAGE_NAME .
+            - docker login --username $DOCKER_HUB_USERNAME --password $DOCKER_HUB_PASSWORD
+            - docker push $IMAGE_NAME
+          services:
+            - docker

@@ -1,0 +1,10 @@
+version: '3.3'
+
+services:
+  magma-website:
+    image: blackwhitespirit/magma:latest
+    container_name: magma-website
+    restart: always
+    environment:
+      - VIRTUAL_HOST=showballetmagma.com
+      - LETSENCRYPT_HOST=showballetmagma.com

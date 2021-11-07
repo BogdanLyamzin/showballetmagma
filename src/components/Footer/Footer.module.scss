@@ -1,0 +1,48 @@
+@import 'src/styles/variables';
+
+.footer {
+  @media (max-width: 500px) {
+    padding: 10vw 0;
+    flex-flow: column wrap;
+  }
+  padding: 1.823vw 4.16666vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #323232;
+}
+
+.link {
+  @media (max-width: 500px) {
+    font-size: 4.26vw;
+    order: 0;
+
+  }
+  color: $white-color;
+  font-size: 1.0416vw;
+  margin-left: 2vw;
+  letter-spacing: 0.3em;
+  transition: color 0.4s;
+  &:hover {
+    color: $main-color;
+  }
+}
+
+.rights {
+  @media (max-width: 500px) {
+    font-size: 4vw;
+    order: 2;
+  }
+  opacity: 0.7;
+  font-size: 1.0416vw;
+  color: $white-color;
+  letter-spacing: 0.05em;
+}
+
+.socials {
+  @media (max-width: 500px) {
+    order: 1;
+    margin: 6.66vw 0;
+
+  }
+}

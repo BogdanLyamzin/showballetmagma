@@ -1,0 +1,39 @@
+@import '../../styles/variables';
+
+.btn{
+  @media (max-width: 500px) {
+    font-size: 4.6vw;
+  }
+  padding: 0;
+    color: $white-color;
+  transition: color 0.4s;
+  font-size: 1.0416vw;
+  margin-bottom: 0.8vw;
+  &:hover {
+    color: $main-color;
+  }
+}
+
+.switcherWrap, .btnsWrap{
+  display: flex;
+  flex-flow: column wrap;
+}
+.btnsWrap{
+  display:none;
+  position: absolute;
+  top: 68%;
+}
+
+.black{
+  color: $text-color;
+}
+
+.white {
+  color: $white-color;
+}
+
+.btnWrapBg{
+  border-radius: 5px;
+  background-color: transparent;
+  backdrop-filter: blur(8px)
+}

@@ -1,0 +1,32 @@
+@import '../../../styles/variables';
+
+//marquee running line
+.marquee {
+  @media (max-width: 500px) {
+    animation: marquee 25s forwards infinite linear;
+  }
+  animation: marquee 15s  forwards infinite linear;
+  display: flex;
+  justify-content: space-around;
+}
+.marqueeItem {
+  @media (max-width: 500px) {
+    font-size: 8vw;
+  }
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-size: 3.125vw;
+  color: #deccdc;
+  opacity: .8;
+  letter-spacing: 0.1em;
+  margin-right: 3vw;
+}
+.marqueeWrap {
+  display: flex;
+}
+
+@keyframes marquee {
+  to {
+      transform: translateX(-50%);
+  }
+}

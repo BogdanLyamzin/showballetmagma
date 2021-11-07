@@ -1,0 +1,173 @@
+.bg {
+  background-color: #fdfafd;
+  overflow: hidden;
+}
+.meduzaTop {
+  position: absolute;
+  top: -35vw;
+  left: -20vw;
+  z-index: 9;
+  opacity: 1;
+  animation: rotate 60s infinite linear alternate;
+}
+
+.meduzaGalleryTopRight {
+  top: -25vw;
+  right: -20vw;
+  z-index: 1;
+  opacity: 1;
+}
+.meduzaGalleryLeft {
+  bottom: -10vw;
+  left: -20vw;
+  z-index: 1;
+  opacity: 1;
+}
+
+.title {
+  @media (max-width: 500px) {
+    font-size: 13vw;
+    padding: 10vw 5vw 35vw;
+    text-align: center;
+  }
+  position: relative;
+  font-size: 5.2083vw;
+  font-weight: 400;
+  color: #323232;
+  padding-top: 3.125vw;
+  padding-bottom: 9vw;
+  &:after {
+    @media (max-width: 500px) {
+      height: 15vw;
+      bottom: 10vw;
+    }
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 3.9vw;
+    background-color: #d4c2d3;
+    left: 50%;
+    bottom: 3.32vw;
+  }
+}
+
+.info {
+  @media (max-width: 500px) {
+    padding-top: 35vw;
+  }
+
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  position: relative;
+  padding-top: 10vw;
+}
+
+.mainInfo {
+  @media (max-width: 500px) {
+    max-width: 90vw;
+  }
+
+  max-width: 42.18vw;
+}
+.description {
+  @media (max-width: 500px) {
+    max-width: 90vw;
+  }
+  max-width: 33.02vw;
+  margin-top: 2.343vw;
+}
+
+.imagesWrap {
+  position: relative;
+  background-color: #fdfafd;
+  padding-top: 20vw;
+
+  &:after {
+    @media (max-width: 500px) {
+      height: calc(100% - 80vw);
+    }
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: calc(100% - 50vw);
+    top: 50%;
+    //height: calc(110% - 50vw);
+    //top: 43%;
+    transform: translateY(-50%);
+    left: 0;
+    background: linear-gradient(
+      253.95deg,
+      #f9f3f8 -0.91%,
+      #ddd8f3 40.13%,
+      #e6d0ea 60.68%,
+      #f9f3f8 108.28%
+    );
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.grid {
+  position: relative;
+  z-index: 2;
+  display: flex;
+}
+
+.columns {
+  @media (max-width: 500px) {
+    padding: 0 5vw;
+    align-items: start;
+  }
+
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  & > div {
+    @media (max-width: 500px) {
+      margin-bottom: 15vw;
+    }
+
+    margin-bottom: 10vw;
+  }
+
+  &:first-child {
+    margin-top: 8vw;
+  }
+}
+
+.partnersSection {
+  @media (max-width: 500px) {
+    padding: 25vw 0 0;
+  }
+  background-color: #fdfafd;
+  overflow: hidden;
+  padding: 10vw 0 0;
+}
+.tesimonialSection {
+  position: relative;
+}
+.meduzaTestimonial {
+  bottom: -18vw;
+  right: -30vw;
+  z-index: 1;
+  opacity: 1;
+}
+.image {
+  &:nth-child(even) {
+    @media (max-width: 500px) {
+      align-self: flex-end;
+    }
+  }
+}

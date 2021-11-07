@@ -1,0 +1,62 @@
+@import '../../styles/variables';
+.header {
+  @media (max-width: 500px) {
+    padding: 7.73vw 5.3vw;
+  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.823vw 4.16666vw;
+}
+.absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+}
+
+.black {
+  color: $text-color;
+}
+.white {
+  color: $white-color;
+}
+
+
+
+.fixed {
+  //@media (max-width: 500px) {
+  //  position: absolute;
+  //}
+    position: fixed;
+  //&:before {
+  //  position: absolute;
+  //  z-index: -1;
+  //  content: '';
+  //  top: 0;
+  //  left: 0;
+  //  right: 0;
+  //  bottom: 0;
+  //  background-color: rgba(155, 69, 156, 0.05);
+  //  backdrop-filter: blur(4px);
+  //  box-shadow: 0 3px 5px rgba(255, 255, 255, 0.001);
+  //}
+}
+
+.animated {
+  @media (max-width: 500px){
+    //transform: none;
+  }
+
+  will-change: transform;
+  transform: translateY(-100%);
+
+  //animation: anim 0.7s linear forwards;
+}
+
+@keyframes anim {
+  from {
+    transform: translateY(-100%);
+  }
+}

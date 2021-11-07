@@ -1,0 +1,23 @@
+
+.image{
+  object-fit: cover;
+}
+
+.thin {
+  @media (max-width: 500px){
+    width: 73.6vw;
+    max-width: 74vw;
+
+  }
+  width: 23.17vw;
+  max-width: 24vw;
+}
+.wide {
+  @media (max-width: 500px){
+    width: 90vw;
+    max-width: 90vw;
+
+  }
+  width: 33.75vw;
+  max-width: 34vw;
+}
