@@ -13,6 +13,7 @@ const AboutUsPage = ({ pageStore, servicesStore, mainInfoStore, uiStore }) => {
   const content = pages.get(pageSlug)
   const serviceImages = pages.get(homePageSlug).homePage
 
+
   return (
     <>
       <Head>
